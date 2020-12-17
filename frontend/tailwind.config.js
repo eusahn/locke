@@ -25,7 +25,10 @@ module.exports = {
       blue: colors.blue,
       indigo: colors.indigo,
       purple: colors.violet,
-      pink: colors.pink
+      pink: colors.pink,
+      "font-one": "#353535",
+      "font-two": "#777777",
+      primary: "#83C9F4"
     },
     spacing: {
       px: "1px",
@@ -170,6 +173,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "Open Sans",
         "ui-sans-serif",
         "system-ui",
         "-apple-system",
