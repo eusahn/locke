@@ -2,39 +2,49 @@
   <div>
     <div class="main-container">
       <Navigation />
-      <section class="p-10">
-        <div class="flex justify-between items-center">
+      <section class="lg:p-10 p-2">
+        <div
+          class="grid md:grid-cols-2 justify-between items-center mt-10 sm:mt-5 md:mt-5"
+        >
           <div>
-            <h1 class="text-6xl font-bold text-font-one">
+            <h1
+              class="text-3xl md:text-3xl lg:text-6xl font-bold text-font-one"
+            >
               Premium Delivery and Management Tool
             </h1>
             <p class="w-full max-w-xl mt-5 text-font-two tracking-wider">
               For those writers who have writers' block, this can be an
               excellent way to take a step to crumbling those walls.
             </p>
-            <div class="mt-5">
+            <div
+              class="mt-5 md:text-left text-left sm:text-center lg:text-left"
+            >
               <input
                 type="text"
                 class=" border-primary border rounded-xl px-3 py-3 w-60"
                 placeholder="name@company.com"
               />
-              <button class="ml-4 bg-primary text-white px-5 py-3 rounded-xl">
+              <button
+                class="block lg:inline-block sm:inline-block sm:ml-2 md:ml-0 md:block lg:ml-4 mt-5 bg-primary text-white px-5 py-3 rounded-xl"
+              >
                 Try for free
               </button>
             </div>
           </div>
 
-          <div>
+          <div class="hidden sm:hidden md:block lg:block md:p-10 lg:p-0">
             <img src="~@/assets/image_1.png" style="max-height: 800px;" />
           </div>
         </div>
       </section>
 
-      <section class="mt-32 pb-10">
+      <section class="mt-24 lg:mt-32 pb-10">
         <h2 class="text-center text-4xl font-bold text-font-one mb-20">
           Features that we provide
         </h2>
-        <div class="grid grid-cols-3 justify-items-center">
+        <div
+          class="grid lg:grid-cols-3 lg:grid-rows-1 gap-10 justify-items-center grid-cols-1 grid-rows-3"
+        >
           <div
             class="bg-black w-72 h-96 rounded-xl px-5 text-center"
             style="background-color: #7681B3"
@@ -86,13 +96,13 @@
           </div>
         </div>
       </section>
-      <section class="mt-44">
-        <div class="grid grid-cols-2 gap-10">
-          <div>
+      <section class="lg:mt-44">
+        <div class="grid lg:grid-cols-2 lg:gap-10 grid-rows-1 grid-cols-1">
+          <div class="hidden lg:block">
             <img src="~@/assets/eg.svg" />
           </div>
-          <div class="px-10">
-            <h4 class="text-4xl text-font-one font-bold pr-10 mt-5">
+          <div class="lg:px-10">
+            <h4 class="text-4xl text-font-one font-bold lg:pr-10 mt-5">
               Why you need our management product
             </h4>
             <p class=" text-font-two mt-10">
@@ -110,9 +120,9 @@
           </div>
         </div>
       </section>
-      <section class="mt-44">
-        <div class="grid grid-cols-2 gap-10">
-          <div class="px-10">
+      <section class="lg:mt-44">
+        <div class="grid lg:grid-cols-2 lg:gap-10">
+          <div class="lg:px-10 mt-5">
             <h4 class="text-4xl text-font-one font-bold pr-10 mt-5">
               Be different, from everybody
             </h4>
@@ -131,18 +141,22 @@
           </div>
         </div>
       </section>
-      <section class="mt-20 p-20">
-        <h2 class="text-center text-4xl font-bold text-font-one px-10">
+      <section class="lg:mt-20 lg:p-20 py-5">
+        <h2
+          class="text-center lg:text-4xl text-xl font-bold text-font-one lg:px-10 mt-10"
+        >
           Join Us Today, Be Part Of The Movement
         </h2>
-        <div class="flex justify-center mt-10 items-center">
+        <div
+          class="lg:flex lg:justify-center mt-10 justify-center flex flex-col items-center sm:flex-row lg:items-center text-center"
+        >
           <input
             type="email"
             placeholder="your@email.com"
             class="inline-block rounded-xl bg-transparent py-3 px-5 w-60 border border-primary"
           />
           <button
-            class="px-8 py-3 text-white font-bold bg-primary rounded-xl ml-5"
+            class="px-8 py-3 mt-5 sm:mt-0 text-white font-bold bg-primary rounded-xl block sm:inline-block sm:ml-2 md:ml-3 lg:ml-2 lg:mt-0"
           >
             Join Us
           </button>
@@ -167,13 +181,6 @@
               <a class="text-white" href="#">About</a>
             </li>
           </ul>
-          <div>
-            <p class="text-white opacity-70">
-              Your Name <br />P.O. Box 283 8562 Fusce Rd. <br />Frederick
-              Nebraska 20620 <br />(123) 456 7890
-            </p>
-            <p></p>
-          </div>
         </div>
       </div>
     </footer>
@@ -197,5 +204,12 @@ export default class Home extends Vue {
 .footer-container {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .main-container,
+  .footer-container {
+    padding: 0 2em;
+  }
 }
 </style>
